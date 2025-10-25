@@ -68,6 +68,7 @@ npm install
 Compile Contracts on Remix or hardhat etc
 
 npm run dev
+```
 Connect your metamask wallet account, ensure there is sepholia balance (you can get it by using a faucet(Ex.Google))
 Explore with multiple accounts
 
