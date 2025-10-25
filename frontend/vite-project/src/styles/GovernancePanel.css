@@ -1,0 +1,63 @@
+/* src/styles/GovernancePanel.css */
+.gov-root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
+  color: #eaf7ff;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.gov-header {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+.gov-header h2 { margin:0; color:#8ff7d2; }
+.back-btn { background:transparent; border:1px solid rgba(255,255,255,0.05); padding:8px 12px; border-radius:8px; cursor:pointer; color:#cdeff2; }
+.wallet-compact .connect { background:linear-gradient(90deg,#00d4ff,#3be9b8); border:none;padding:8px 12px;border-radius:8px;cursor:pointer;color:#041223;font-weight:700; }
+
+.gov-grid {
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap:16px;
+}
+
+/* panels */
+.panel {
+  background: linear-gradient(180deg,#071126, #06111a);
+  border-radius:12px;
+  padding:14px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.create-panel h3, .list-panel h3 { margin-top:0; color:#9ff0d7; }
+
+/* inputs */
+label { font-size:13px; color:#9aa7bf; display:block; margin-top:10px; }
+input { width:100%; padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:#071926; color:#e6eef6; margin-top:6px; }
+
+/* buttons */
+button { cursor:pointer; padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:#0b1220; color:#e6eef6; }
+button.primary { background:linear-gradient(90deg,#00d4ff,#3be9b8); color:#041223; border:none; padding:10px 14px; border-radius:8px; font-weight:700; }
+button:disabled { opacity:0.5; cursor:not-allowed; }
+
+/* proposals */
+.proposal-card { margin-top:10px; border-radius:8px; padding:12px; background:linear-gradient(180deg,#06111a,#05101a); border:1px solid rgba(255,255,255,0.02); }
+.proposal-top { display:flex; gap:8px; justify-content:space-between; align-items:center; }
+.proposal-body { margin-top:8px; color:#cfeff3; display:grid; grid-template-columns: 1fr 1fr; gap:8px; }
+.proposal-actions { margin-top:10px; display:flex; gap:8px; }
+
+/* help */
+.gov-help { margin-top:14px; color:#9aa7bf; background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; font-size:14px; }
+
+/* utilities */
+.muted { color:#9aa7bf; }
+.muted-block { margin-top:12px; color:#9aa7bf; background:rgba(255,255,255,0.02); padding:8px; border-radius:8px; }
+.status { margin-top:10px; color:#9ff; }
+
+/* responsive */
+@media (max-width: 880px) {
+  .gov-grid { grid-template-columns: 1fr; }
+  .proposal-body { grid-template-columns: 1fr; }
+}

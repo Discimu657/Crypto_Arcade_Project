@@ -1,0 +1,19 @@
+/* src/styles/LootBoxPanel.css */
+.loot-root { max-width:1100px; margin:16px auto; padding:16px; color:#eaf7ff; font-family:Inter,system-ui,sans-serif; }
+.loot-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.back-btn { background:transparent; border:1px solid rgba(255,255,255,0.06); padding:8px 10px; border-radius:8px; cursor:pointer; color:#cdeff2; }
+.panel { background:linear-gradient(180deg,#06111a,#05101a); padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); }
+.loot-grid { display:grid; grid-template-columns:420px 1fr; gap:12px; }
+.buy-panel h3, .rewards-panel h3 { color:#9ff0d7; margin-top:0; }
+.price-row { display:flex; justify-content:space-between; margin-bottom:12px; color:#cfeff3; }
+input[type="number"] { width:100%; padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:#071926; color:#e6eef6; margin-bottom:8px; }
+.approve-row { margin-top:8px; margin-bottom:8px; }
+button { cursor:pointer; padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:#0b1220; color:#e6eef6; }
+button.primary { background:linear-gradient(90deg,#00d4ff,#3be9b8); color:#041223; border:none; padding:10px 14px; border-radius:8px; font-weight:700; }
+.approved-tag { color:#9ff0d7; font-weight:700; }
+.rewards-list { display:flex; flex-direction:column; gap:8px; margin-bottom:12px; }
+.reward-row { display:flex; justify-content:space-between; padding:8px; border-radius:8px; background:rgba(255,255,255,0.02); }
+.recent-row { display:flex; justify-content:space-between; align-items:center; padding:8px; border-radius:8px; background:rgba(255,255,255,0.01); margin-bottom:6px; }
+.muted { color:#9aa7bf; }
+.help { margin-top:16px; color:#9aa7bf; background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; }
+@media (max-width:880px) { .loot-grid { grid-template-columns: 1fr; } }

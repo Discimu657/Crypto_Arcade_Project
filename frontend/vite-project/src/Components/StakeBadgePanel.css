@@ -1,0 +1,13 @@
+
+
+
+.stake-panel { background:#071226;padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03); color:#e6eef6; }
+.stake-panel h2 { color:#7fffd4;margin:0 0 12px 0; }
+.row { margin:8px 0; display:flex; gap:8px; align-items:center; }
+.panel { background:#08162a;padding:12px;border-radius:8px;margin-top:12px; }
+.tiers { display:flex;gap:12px; margin-bottom:8px; }
+.stake-controls{display:flex;gap:8px;margin-top:8px}
+.stake-controls input{padding:8px;border-radius:8px;background:#0b1220;border:none;color:#e6eef6;width:160px}
+.stake-controls button{padding:8px;border-radius:8px;background:linear-gradient(90deg,#00d4ff,#3be9b8);color:#041223;border:none;cursor:pointer}
+.actions-row{display:flex;gap:8px}
+.actions-row button{padding:8px;border-radius:8px;background:#00bfa5;border:none;color:#041223;cursor:pointer}

@@ -1,0 +1,118 @@
+/* App.css - modern Dapp dashboard style */
+
+:root {
+  --bg: #0b0f1a;
+  --card: #0f1724;
+  --muted: #9aa7bf;
+  --accent-1: #00d4ff;
+  --accent-2: #3be9b8;
+  --glass: rgba(255,255,255,0.03);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: linear-gradient(180deg,#071227 0%, #041021 100%);
+  color: #e6eef6;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding: 24px;
+  display:flex;
+  justify-content:center;
+}
+
+.dapp {
+  width: 1200px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* Header */
+.dapp-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:14px 18px;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.brand { display:flex; gap:12px; align-items:center; }
+.logo { font-size:28px; }
+.brand h1 { margin:0; font-size:20px; color:#7fffd4; }
+.tag { margin:0; color:var(--muted); font-size:12px; }
+
+.header-right { display:flex; align-items:center; gap:12px; }
+.connect, .disconnect {
+  background: linear-gradient(90deg,var(--accent-2),var(--accent-1));
+  border:none; padding:8px 12px; border-radius:8px; color:#041223; cursor:pointer; font-weight:700;
+}
+
+/* layout */
+.main-grid {
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:18px;
+}
+
+/* Left column */
+.left-column { display:flex; flex-direction:column; gap:18px; }
+
+.overview {
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  background:var(--card);
+  padding:16px; border-radius:12px; border:1px solid var(--glass);
+}
+.overview-left { display:flex; gap:12px; align-items:center; }
+.stat { background:#071226; padding:12px 16px; border-radius:8px; min-width:140px; }
+.stat-title { color:var(--muted); font-size:12px; }
+.stat-value { font-size:20px; font-weight:700; margin-top:6px; }
+
+.overview-right { min-width:220px; display:flex; flex-direction:column; gap:10px; align-items:flex-end; }
+.quick-actions { display:flex; gap:8px; }
+.quick-actions button { background:#172433; color:#9fdff0; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+
+/* Modules */
+.modules { background:var(--card); padding:14px; border-radius:12px; border:1px solid var(--glass); }
+.module-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; margin-top:12px; }
+
+.module-card {
+  background: linear-gradient(180deg,#071126, #06111a);
+  padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.02);
+  display:flex; flex-direction:column; gap:8px;
+}
+.module-card-top { display:flex; justify-content:space-between; align-items:center; }
+.module-title { font-weight:700; }
+.tag-small { padding:6px 8px; border-radius:999px; font-size:12px; }
+.tag-small.live { background:#013927; color:#9ff0d7; }
+.tag-small.beta { background:#2b214f; color:#c7b9ff; }
+.module-desc { color:var(--muted); font-size:13px; }
+.module-meta { display:flex; justify-content:space-between; color:var(--muted); font-size:13px; margin-top:6px; }
+.module-actions { display:flex; gap:8px; margin-top:8px; }
+.module-actions button { padding:8px 10px; border-radius:8px; border:none; cursor:pointer; background:linear-gradient(90deg,#00d4ff,#3be9b8); color:#041223; font-weight:700; }
+.module-actions .ghost { background:transparent; border:1px solid rgba(255,255,255,0.03); color:var(--muted); font-weight:600; }
+
+/* Right column */
+.right-column { display:flex; flex-direction:column; gap:12px; }
+.panel {
+  background:var(--card); padding:12px; border-radius:10px; border:1px solid var(--glass);
+}
+.leaderboard { list-style:none; margin:0; padding:0; }
+.leaderboard li { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed rgba(255,255,255,0.02); color:var(--muted); }
+.activity { list-style:none; margin:0; padding:0; color:var(--muted); font-size:13px; }
+
+/* Footer */
+.footer { display:flex; justify-content:space-between; color:var(--muted); font-size:13px; padding:8px 0 40px 0; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .dapp { width: 95%; }
+  .main-grid { grid-template-columns: 1fr; }
+  .module-grid { grid-template-columns: 1fr; }
+  .right-column { order: 2; }
+}
